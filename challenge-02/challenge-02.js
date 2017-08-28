@@ -45,8 +45,7 @@ function calculos(argumento1, argumento2, argumento3)
   if(argumento1 === undefined || argumento2 === undefined || argumento3 === undefined)
     return 'Preencha todos os valores corretamente!';
 
-  return (argumento1 * argumento2 * argumento3) + 2
-
+  return (argumento1 * argumento2 * argumento3) + 2;
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
@@ -74,16 +73,8 @@ function novosCalculos(argumento1, argumento2, argumento3)
 {
   if((argumento1 !== undefined && argumento2 === undefined && argumento3 === undefined)){
     return argumento1;
-  } else if(argumento2 !== undefined && argumento1 === undefined && argumento3 === undefined){
-    return argumento2;
-  } else if(argumento3 !== undefined && argumento1 === undefined && argumento2 === undefined){
-    return argumento3;
   } else if(argumento1 !== undefined && argumento2 !== undefined && argumento3 === undefined){
     return argumento1 + argumento2;
-  } else if(argumento2 !== undefined && argumento3 !== undefined && argumento1 === undefined){
-    return argumento2 + argumento3;
-  } else if(argumento3 !== undefined && argumento1 !== undefined && argumento2 === undefined){
-    return argumento3 + argumento1;
   } else if(argumento1 !== undefined && argumento2 !== undefined && argumento3 !== undefined) {
     return (argumento1 + argumento2) / argumento3;
   } else if(argumento1 === undefined && argumento2 === undefined && argumento3 === undefined){
@@ -94,7 +85,7 @@ function novosCalculos(argumento1, argumento2, argumento3)
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-novosCalculos();
-novosCalculos(10);
-novosCalculos(10, 20);
-novosCalculos(10, 20, 30);
+novosCalculos(); // false
+novosCalculos(10); // 10
+novosCalculos(10, 20); // 30
+novosCalculos(10, 20, 30); // 10
