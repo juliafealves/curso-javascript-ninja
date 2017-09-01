@@ -118,8 +118,14 @@ carro.adicionarPassageiros = function (numeroPessoas)
 {
   carro.quantidadePessoas += numeroPessoas;
 
-  if(carro.quantidadePessoas >= carro.assentos)
+  if (carro.quantidadePessoas === carro.assentos){
     return 'O carro já está lotado!';
+  }else if(numeroPessoas > (carro.quantidadePessoas - carro.assentos)) {
+    var quantidadePessoas = carro.assentos - carro.quantidadePessoas;
+    var pluralPessoas = (quantidadePessoas === 1) ? 'pessoa' : 'pessoas';
+
+    return 'Só cabem mais ' + quantidadePessoas + ' ' + pluralPessoas + '!';
+  }
 
   return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
 };
