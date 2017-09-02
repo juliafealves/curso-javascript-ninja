@@ -7,7 +7,7 @@ para o contrário.
 var isTruthy = function (argumento)
 {
   return !!argumento;
-}
+};
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 isTruthy(false);
@@ -16,6 +16,7 @@ isTruthy(undefined);
 isTruthy(0);
 isTruthy(-0);
 isTruthy('');
+isTruthy(NaN);
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
@@ -27,7 +28,7 @@ isTruthy(1);
 isTruthy('abc');
 isTruthy(-1);
 isTruthy('undefined');
-isTruthy(0.5);
+isTruthy(function () {});
 isTruthy('0');
 isTruthy('-0');
 isTruthy('null');
@@ -118,7 +119,7 @@ carro.adicionarPassageiros = function (numeroPessoas)
 {
   carro.quantidadePessoas += numeroPessoas;
 
-  if (carro.quantidadePessoas === carro.assentos){
+  if (carro.quantidadePessoas >= carro.assentos){
     return 'O carro já está lotado!';
   }else if(numeroPessoas > (carro.quantidadePessoas - carro.assentos)) {
     var quantidadePessoas = carro.assentos - carro.quantidadePessoas;
@@ -138,37 +139,37 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.obterCor(); // Chumbo
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudarCor('Vermelho');
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor(); // Vermelho
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudarCor('Verde Musgo');
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor(); // Verde Musgo
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMarcaModelo();
 
 // Adicione 2 pessoas no carro.
-?
+carro.adicionarPassageiros(2);
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarPassageiros(4);
 
 // Faça o carro encher.
-?
+carro.adicionarPassageiros(5);
 
 // Tire 4 pessoas do carro.
-?
+carro.quantidadePessoas -= 4;
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPassageiros(10);
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas;
