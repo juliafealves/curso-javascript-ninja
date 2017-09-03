@@ -96,7 +96,7 @@ Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function ()
 {
-  return 'Esse carro é um ' + carro.marca + ' ' + carro.modelo;
+  return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo();
 };
 
 /*
